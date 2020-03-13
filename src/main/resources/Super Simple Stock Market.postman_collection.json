@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "30069f8e-f210-4ba3-97d0-d83c88549570",
+		"name": "Super Simple Stock Market",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Dividend",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/stock/dividend/TEA?price=15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"stock",
+						"dividend",
+						"TEA"
+					],
+					"query": [
+						{
+							"key": "price",
+							"value": "15"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Stock Index",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/stock/index",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"stock",
+						"index"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get PE Ratio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/stock/peratio/GIN?price=133",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"stock",
+						"peratio",
+						"GIN"
+					],
+					"query": [
+						{
+							"key": "price",
+							"value": "133"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Volume Weghted Stock Price",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/trade/vwsp",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"trade",
+						"vwsp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Trade",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"quantity\": 105,\n    \"tradedPrice\": 66.55,\n    \"side\": \"Sell\",\n    \"stock\": {\n        \"symbol\": \"GIN\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/trade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"trade"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find All Trades",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/trade",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"trade"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
